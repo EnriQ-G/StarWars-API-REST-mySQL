@@ -78,15 +78,15 @@ footer {
     box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5) !important;
 }
 
-/*form {
+form {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, auto);
     gap: 10px;
     margin: 10px auto;
     max-width: 600px;
+}
 
-}*/
 
 label {
     display: inline-block;

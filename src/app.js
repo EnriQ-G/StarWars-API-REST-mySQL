@@ -1,5 +1,6 @@
 import express from "express";
 import morgan from "morgan";
+import helmet from "helmet";
 
 //Routes, sirve para importar las rutas de la API
 import starwarsRoutes from "./routes/starwars.routes";
@@ -12,6 +13,7 @@ app.set("port", 4000);
 // Middlewares, sirve para procesar datos antes de que lleguen a las rutas
 app.use(morgan("dev"));
 app.use(express.json());
+app.use(helmet()); //sirve para proteger la API
 
 // CORS Middleware, sirve para realizar peticiones desde el front-end
 app.use(function (req, res, next) {

@@ -29,55 +29,7 @@ async function getCharacter() {
     }
 }
 
-// Define una función para agregar una nueva persona
-function addPerson(person) {
-    const url = "http://localhost:4000/api/starwars/";
-
-    return fetch(url, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(person)
-    })
-        .then(res => res.json())
-        .catch(error => {
-            console.error(error);
-        });
-}
-
-// Define una función para actualizar una persona existente
-function updatePerson(id, person) {
-    const url = `http://localhost:4000/api/starwars/${id}`;
-
-    return fetch(url, {
-        method: "PUT",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(person)
-    })
-        .then(res => res.json())
-        .catch(error => {
-            console.error(error);
-        });
-}
-
-// Define una función para eliminar una persona existente	
-function deletePerson(id) {
-    const url = `http://localhost:4000/api/starwars/${id}`;
-
-    return fetch(url, {
-        method: "DELETE"
-    })
-        .then(res => res.json())
-        .catch(error => {
-            console.error(error);
-        });
-}
-
 //Modifica la función fetchData para que muestre los datos de la API en la página web
-
 function fetchData() {
     const ul = document.createElement("ul");
 

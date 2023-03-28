@@ -44,9 +44,11 @@ const addPerson = async (req, res) => {
         const connection = await getConnection();
         const result = await connection.query("INSERT INTO base.people SET ?", person);
         res.json({ message: "Person added" });
+        console.log("Person added")
     } catch (error) {
         res.status(500);
         res.send(error.message);
+        console.log(error)
     }
 
 };
@@ -65,9 +67,11 @@ const updatePerson = async (req, res) => {
         const connection = await getConnection();
         const result = await connection.query("UPDATE base.people SET ? WHERE id = ?", [person, id]);
         res.json(result);
+        console.log("Person updated")
     } catch (error) {
         res.status(500);
         res.send(error.message);
+        console.log(error)
     }
 
 };
@@ -80,9 +84,11 @@ const deletePerson = async (req, res) => {
         const connection = await getConnection();
         const result = await connection.query("DELETE FROM base.people WHERE id = ?", id);
         res.json(result);
+        console.log("Person deleted")
     } catch (error) {
         res.status(500);
         res.send(error.message);
+        console.log(error)
     }
 
 };
