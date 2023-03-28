@@ -4,7 +4,8 @@
   "description": "El presente proyecto se divide en las siguientes partes:\r   -Arquitectura de desarrollo\r   -Dependencias necesarias para su ejecución\r   -Estructura del codigo\r     -Views\r     -Entry\r     -Routes\r     -Controllers\r     -Database\r   -Logica de programación",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "babel-node": "babel-node --presets @babel/preset-env",
+    "dev": "nodemon --exec npm run babel-node src/index.js"
   },
   "author": "",
   "license": "ISC",
