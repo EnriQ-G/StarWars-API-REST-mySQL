@@ -13,7 +13,7 @@ body {
     height: 100vh;
     background-size: cover;
     box-sizing: border-box;
-    filter: blur(5px);
+    filter: blur(1px);
 }
 
 .bg-text {
@@ -76,4 +76,33 @@ footer {
 
 .btn.edit-data:focus {
     box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5) !important;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    width: auto;
 }
