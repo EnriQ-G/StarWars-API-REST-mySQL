@@ -13,11 +13,11 @@ body {
     height: 100vh;
     background-size: cover;
     box-sizing: border-box;
-    filter: blur(10px);
+    filter: blur(5px);
 }
 
 .bg-text {
-    background-color: cadetblue;
+    background-color: rgb(102, 153, 155);
     color: var(--main-color);
     font-weight: bold;
     border: 3px solid grey;
@@ -47,4 +47,33 @@ footer {
 .container-personajes {
 
     color: black;
+}
+
+.btn-primary {
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9 !important;
+    border-color: #0062cc !important;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5) !important;
+}
+
+.btn.btn.edit-data {
+    background-color: #ff9800;
+    border-color: #ff9800;
+    color: #fff;
+}
+
+.btn.edit-data:hover {
+    background-color: #f57c00;
+    border-color: #f57c00;
+}
+
+.btn.edit-data:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5) !important;
 }
