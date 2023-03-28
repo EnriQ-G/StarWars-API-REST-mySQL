@@ -80,11 +80,12 @@ footer {
 
 form {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, auto);
     gap: 10px;
-    margin: 20px auto;
+    margin: 10px auto;
     max-width: 600px;
+
 }
 
 label {
