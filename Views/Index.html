@@ -20,7 +20,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="./Index.html">
                 <img src="./imagenes/Site-logo.webp" alt="" width="30" class="d-inline-block align-text-top">
                 StarWars Wiki</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -31,21 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Explore
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                        <a class="nav-link active" aria-current="page" href="./Index.html">Home</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -57,14 +43,15 @@
         </div>
     </nav>
     <div class="bg home"></div>
-    <div class="bg-text container">
-        <h1>StarWars</h1>
-        <div class="personajes" id="container" class="d-flex">
+    <div class="bg-text">
+        <h1>StarWars - API Rest</h1>
+        <div class="personajes" class="d-flex">
             <button onclick="fetchData()" class="btn btn-primary" class="me-2 btn btn-outline-success"
                 type="button">Data</button>
             <button onclick="window.location.href='Indexpag2.html'" class="btn btn-outline-secondary edit-data"
                 type="button">Edit</button>
         </div>
+        <div id="container" class="wrapper"></div>
     </div>
     <footer>
         <div class="container">

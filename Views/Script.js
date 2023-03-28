@@ -107,9 +107,3 @@ function fetchData() {
             console.error(error);
         });
 }
-/*
-const searchButton = document.querySelector("#searchButton");
-searchButton.addEventListener("click", function () {
-    fetchData();
-    search_character_button_click()
-});*/
