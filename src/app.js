@@ -1,15 +1,15 @@
 import express from "express";
 import morgan from "morgan";
 
-//Routes
+//Routes, sirve para importar las rutas de la API
 import starwarsRoutes from "./routes/starwars.routes";
 
 const app = express();
 
-// settings
+// settings, sirve para configurar el servidor
 app.set("port", 4000);
 
-// Middleware
+// Middlewares, sirve para procesar datos antes de que lleguen a las rutas
 app.use(morgan("dev"));
 app.use(express.json());
 
@@ -20,7 +20,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-// Routes
+// Routes Middleware
 app.use("/api/starwars", starwarsRoutes);
 
 export default app;
