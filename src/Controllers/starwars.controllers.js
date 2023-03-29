@@ -36,7 +36,7 @@ const addPerson = async (req, res) => {
     try {
         const { name, height, mass, hair_color, skin_color, eye_color, birth_year, gender, planet_id, url } = req.body;
 
-        if (name === undefined || height === undefined || mass === undefined || hair_color === undefined || skin_color === undefined || eye_color === undefined || birth_year === undefined || gender === undefined || planet_id === undefined || url === undefined) {
+        if (name === undefined || height === undefined || mass === undefined || hair_color === undefined || skin_color === undefined || eye_color === undefined || birth_year === undefined || gender === undefined || planet_id === undefined) {
             res.status(400).json({ message: "Bad request. Please fill all the fields." })
         }
 

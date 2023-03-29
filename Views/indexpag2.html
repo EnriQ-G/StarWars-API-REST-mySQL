@@ -43,11 +43,23 @@
         </div>
     </nav>
     <div class="bg home"></div>
-    <div class="bg-text">
-        <h1>StarWars - API Rest</h1>
-        <form id="myForm" action="/submit-form">
+    <div class="bg-text container">
+        <h1>StarWars</h1>
+        <script>
+            function setMethod(method) {
+                // Set the method value of the form
+                var form = document.getElementById("myForm");
+                form.method = method;
+
+                // Update the text of the button to reflect the selected method
+                var button = document.getElementById("submitButton");
+                button.textContent = method;
+            }
+        </script>
+
+        <form id="myForm" action="http://localhost:4000/api/starwars/" method="POST">
             <label for="id">ID:</label>
-            <input type="number" id="id" name="id">
+            <input type="text" id="id" name="id">
 
             <label for="name">Name:</label>
             <input type="text" id="name" name="name">
@@ -76,9 +88,19 @@
             <label for="planet_id">Planet ID:</label>
             <input type="number" id="planet_id" name="planet_id">
 
-            <button id="postButton" type="submit" class="btn btn-primary" name="method" value="POST">POST</button>
-            <button id="putButton" type="submit" class="btn btn-primary" name="method" value="PUT">PUT</button>
-            <button id="deleteButton" type="submit" class="btn btn-primary" name="method" value="DELETE">DELETE</button>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Method
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#" onclick="setMethod('POST')">POST</a>
+                    <a class="dropdown-item" href="#" onclick="setMethod('PUT')">PUT</a>
+                    <a class="dropdown-item" href="#" onclick="setMethod('DELETE')">DELETE</a>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
         </form>
     </div>
     <footer>
