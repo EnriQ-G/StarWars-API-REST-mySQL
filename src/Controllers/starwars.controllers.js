@@ -59,10 +59,6 @@ const updatePerson = async (req, res) => {
     try {
         const { id } = req.params
         const { name, height, mass, hair_color, skin_color, eye_color, birth_year, gender, planet_id, url } = req.body;
-        if (id === undefined || name === undefined || height === undefined || mass === undefined || hair_color === undefined || skin_color === undefined || eye_color === undefined || birth_year === undefined || gender === undefined || planet_id === undefined || url === undefined) {
-            res.status(400).json({ message: "Bad request. Please fill all the fields." })
-        }
-
         const person = { id, name, height, mass, hair_color, skin_color, eye_color, birth_year, gender, planet_id, url }
         const connection = await getConnection();
         const result = await connection.query("UPDATE base.people SET ? WHERE id = ?", [person, id]);
@@ -73,7 +69,6 @@ const updatePerson = async (req, res) => {
         res.send(error.message);
         console.log(error)
     }
-
 };
 
 

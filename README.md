@@ -10,5 +10,10 @@ El presente proyecto se divide en las siguientes partes:
     -Controllers
     -Database
   -Logica de programación 
+  -Limitaciones
 
-//
+----------------------------
+
+Arquitectura del proyecto
+
+El proyecto se hace con base a la metodología MVC
