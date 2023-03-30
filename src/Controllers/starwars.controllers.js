@@ -19,9 +19,9 @@ const getPeople = async (req, res) => {
 //Esto nos sirve para poder obtener un personaje en específico
 const getPerson = async (req, res) => {
     try {
-        const { id } = req.params
+        const { name } = req.params
         const connection = await getConnection();
-        const result = await connection.query("SELECT id, name, height, mass, hair_color, skin_color, eye_color, birth_year, gender, planet_id, created_date, updated_date, url FROM base.people WHERE id = ?", id);
+        const result = await connection.query("SELECT id, name, height, mass, hair_color, skin_color, eye_color, birth_year, gender, planet_id, created_date, updated_date, url FROM base.people WHERE name = ?", name);
         res.json(result);
     } catch (error) {
         res.status(500);
